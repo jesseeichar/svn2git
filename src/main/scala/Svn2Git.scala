@@ -81,7 +81,7 @@ object Svn2Git {
         if !(gitBranches contains branch)
         if notMaster(branch)
         remote = "remotes/"+branch} {
-      exec("git","co","-b",branch,remote)
+      exec("git","branch",branch,remote)
     }
 
     // delete removed branches
