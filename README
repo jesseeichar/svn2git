@@ -1,0 +1,20 @@
+Another take at the SVN to GIT migration.  I tried the ruby version and was able to checkout but update failed miserably, in additional remotes are added that causes problems.  This version requires both git and svn be installed but provides a good representation of the SVN repo and handles updates correctly so tags and branches will be updated when the SVN is updated.
+
+Instructions:
+
+Clone repository:
+ # Download latest jar from downloads section
+ # java -jar svn2java-version.jar <url> [directory]
+
+url is the svn url and directory is the checkout dir.  If empty . is assumed
+
+Update git svn repository:
+ # cd repository
+ # java -jar svn2java-version.jar 
+
+or
+ # java -jar svn2java-version.jar [repository directory]
+
+
+Note:  At the moment only standard repostories can be cloned and updated.  IE svn repos with structure:  trunk branches tags
+
